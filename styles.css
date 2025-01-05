@@ -1,0 +1,138 @@
+:root {
+    --clr-light-grey: #DFDEE0;
+    --clr-deep-violet: #21092F;
+    --clr-purplish-grey: #8f8694;
+    --clr-red: #ff5050;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.hidden {
+    display: none;
+}
+
+#card-front {
+    position: relative;
+    width: 350px;
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+
+#card-front #card-front-img {
+    width: 100%;
+}
+
+#card-front #card-front-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+}
+
+#card-front #number-display {
+    font-size: 1.75rem;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
+
+#card-front #number-display .segment:not(:first-child) {
+    margin-left: .2em;
+
+}
+
+#card-front .name-month-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#card-front #date-display, #card-front #name-display {
+    margin: 0;
+}
+
+.form {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    max-width: 400px;
+    padding: 1em;
+    margin-inline: auto;
+}
+
+.form label, .form legend {
+    text-transform: uppercase;
+    margin-bottom: .2rem;
+}
+
+.form input {
+    min-width: 0;
+    padding-left: .3rem;
+}
+
+.name-input {
+    grid-column: 1/-1;
+}
+
+.number-input {
+    grid-column: 1/-1;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-block: .5rem;
+}
+
+.number-input {
+    grid-column: 1/-1;
+}
+
+.date-input {
+    display: grid;
+    grid-column: 1;
+    border: none;
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.date-input #month-input {
+    grid-column: 1;
+    display: block;
+
+}
+
+.date-input #year-input {
+    grid-column: 2;
+    display: block;
+}
+
+
+.cvv-input {
+    grid-column: 2;
+}
+
+.confirm-btn {
+    grid-column: 1/-1;
+    background-color: var(--clr-deep-violet);
+    color: white;
+}
+
+
+.form input, .confirm-btn {
+    line-height: 2.5;
+    border-radius: .4rem;
+    border: 1px solid var(--clr-light-grey);
+}
+
